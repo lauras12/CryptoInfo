@@ -29,12 +29,12 @@ function displayNews(responseJson) {
     // for each news article object in the items 
     //array, add a list item to the results 
     $('#results-list').append(
-      `<li><h3>${articles[i].title}</h3>
-      <p>${articles[i].description}</p>
+      `<li><h3 class="title">${articles[i].title}</h3>
+      <p class="articleDes">${articles[i].description}</p>
       </li>`
     )};
   //display the results section  
-  $('#results').removeClass('hidden');
+  $("#results").removeClass("hidden");
 };
 
 function displayExchange(responseJson) {
@@ -45,14 +45,14 @@ function displayExchange(responseJson) {
   const id = responseJson;
    
    $('#exchange-list').append(
-      `<li><h3>${responseJson.name}</h3>
-      <p>Symbol: ${responseJson.symbol}</p>
-      <p>Market cap rank: ${responseJson.market_cap_rank}</p>
-      <p>Current price: $ ${responseJson.market_data.current_price.usd}</p>
+      `<li><h3 class="cryptoTitle">${responseJson.name}</h3>
+      <p class="exchange">Symbol: ${responseJson.symbol}</p>
+      <p class="exchange">Market Cap Rank: ${responseJson.market_cap_rank}</p>
+      <p class="exchange exchangeLast">Current Price: $ ${responseJson.market_data.current_price.usd}</p>
       </li>`
     )};
     // display the results
-   $('#results').removeClass('hidden');
+   $("#results").removeClass("hidden");
 
 
 function fetchAPI(url) {

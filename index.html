@@ -7,23 +7,27 @@
     <title>Crypto News & Exchange Info</title>
     <link rel="shortcut icon" href="#">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&family=Roboto+Mono&family=Roboto+Slab&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <h1>Crypto News Info</h1>
+        <p class="description">Type in the name of a cryptocurrency and submit to see a collection of recent news headlines and exchange infomation.</p>
 
         <form id="js-form">
-            <label for="search-term">Search term</label>
+            <label for="search-term"><strong>Search Term:</strong></label>
             <input type="text" name="search-term" id="js-search-term" required>
-            <input type="submit" value="GO!">
+            <input type="submit" value="GO!" class="button">
         </form>
 
         <p id="js-error-message" class="error-message"></p>
         <section id="results" class="hidden">
-          <h2>News results</h2>
-          <ul id="results-list"></ul>
-          <h2>Exchange Info</h2>
+          <h2 id="results" class="hidden">Exchange Info</h2>
           <ul id="exchange-list"></ul>
+
+          <h2 id="results" class="hidden">News Results</h2>
+          <ul id="results-list"></ul>
+
         </section>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
