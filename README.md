@@ -18,6 +18,7 @@ This app was created to allow users to easily be able to type in a cryptocurrenc
 * HTML
 * CSS
 * JavaScript
+  *JQuery
 
 # APIs Used
 * <a href="https://www.coingecko.com/en/api">CoinGecko API</a>
