@@ -1,89 +1,126 @@
 * {
-    box-sizing: border-box;
-    margin: auto;
-    background-color: #D9D9D9;
-  }
-  
-  h1 {
-    text-align: center;
-    font-family: 'Roboto Mono', monospace;
-    font-size: 45px;
-    padding: 30px;
-    color: #4484CE;
-  }
-  
-  .description {
-    text-align: center;
-    font-size: 15px;
-    padding: 15px;
-    width: 75%;
-    color: #F19F4D;
-    background-color: white;
-  }
-  
-  form {
-    text-align: center;
-    font-family: 'Roboto Mono', monospace;
-    padding: 15px;
-    color: #4484CE;
-  }
-  
-  #js-search-term {
-    color: #F19F4D;
-    background-color: white;
-  }
-  
-  .button {
-    cursor:pointer;
-    color: #F19F4D;
-    background-color: white;
-  }
-  
-  h2, h3 {
-    font-family: 'Roboto Mono', monospace;
-    padding: 15px;
-  }
-  
-  p {
-    font-family: monospace;
-  }
-  
-  .hidden {
-    display: none;
-  }
-  
-  ul {
-    list-style-type: none;
+  box-sizing: border-box;
+  margin: auto;
+  background-color: #dae1e7;
+}
+
+/* styling title */
+h1 {
+  text-align: center;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 45px;
+  padding: 30px;
+  color: #142850;
+}
+
+/* styling the des info/how to info */
+.description {
+  text-align: center;
+  font-size: 15px;
+  padding: 15px;
+  width: 75%;
+  color: #27496d;
+  background-color: white;
+}
+
+/* styling the search form */
+form {
+  text-align: center;
+  font-family: 'Roboto Mono', monospace;
+  padding: 15px;
+  color: #142850;
+}
+
+#js-search-term {
+  color: #142850;
+  background-color: white;
+}
+
+.button {
+  cursor:pointer;
+  color: white;
+  background-color: #00909e;
+}
+
+/* styling the exchange & news titles */
+h2, h3 {
+  font-family: 'Roboto Mono', monospace;
+  padding: 15px;
+  color: #27496d;
+}
+
+/* styling the exchange & news des */
+p {
+  font-family: monospace;
+}
+
+.hidden {
+  display: none;
+}
+
+ul {
+  list-style-type: none;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+.title {
+  text-decoration: underline;
+  background-color: white;
+}
+
+.articleDes {
+  background-color: white;
+  color: #27496d;
+  font-size: 14px;
+  padding-left: 15px;
+  padding-right: 2%;
+  padding-bottom: 4%;
+  border-bottom: 2px solid #00909e;
+}
+
+.cryptoTitle {
+  color: #00909e;
+  background-color: #dae1e7;
+  text-align: center;
+  font-size: 25px;
+}
+
+.exchange {
+  padding-left: 15px;
+  background-color: #dae1e7;
+  text-align: center;
+  font-size: 14px;
+}
+
+.exchangeLast {
+  padding-bottom: 30px;
+}
+
+/* styling footer */
+footer {
+  font-family: monospace;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+/* adding media query for smaller screens */
+ @media only screen and (max-width: 600px) {
+   h1 {
+    font-size: 25px;
+    padding: 15px;
+   }
+
+   .description {
+     width: 90%;
+   }
+
+  #js-search-term, .button {
+    width: 80%;
   }
-  
-  .title {
-    color: #4484CE;
-    text-decoration: underline;
-    background-color: white;
-  }
-  
-  .articleDes {
-    padding-left: 15px;
-    background-color: white;
-    font-size: 14px;
-  }
-  
-  .cryptoTitle {
-    color: #4484CE;
-    text-decoration: underline;
-    background-color: #F19F4D;
-    text-align: center;
-  }
-  
-  .exchange {
-    padding-left: 15px;
-    background-color: #F19F4D;
-    text-align: center;
-    font-size: 14px;
-  }
-  
-  .exchangeLast {
-    padding-bottom: 30px;
-  }
+
+ }
+

@@ -29,31 +29,31 @@ function displayNews(responseJson) {
     // for each news article object in the items 
     //array, add a list item to the results 
     $('#results-list').append(
-      `<li><h3 class="title">${articles[i].title}</h3>
+      `<li><a href="${articles[i].url}"><h3 class="title">${articles[i].title}</a></h3>
       <p class="articleDes">${articles[i].description}</p>
       </li>`
     )};
   //display the results section  
   $("#results").removeClass("hidden");
-};
+}
 
 function displayExchange(responseJson) {
-  //clear previous results
-  console.log(Object.keys(responseJson));
+  // clear previous results
+  // console.log(Object.keys(responseJson));
   $('#exchange-list').empty();
 
   const id = responseJson;
-   
+   // appending info from coingecko API into the DOM
    $('#exchange-list').append(
       `<li><h3 class="cryptoTitle">${responseJson.name}</h3>
       <p class="exchange">Symbol: ${responseJson.symbol}</p>
       <p class="exchange">Market Cap Rank: ${responseJson.market_cap_rank}</p>
       <p class="exchange exchangeLast">Current Price: $ ${responseJson.market_data.current_price.usd}</p>
       </li>`
-    )};
+    );
     // display the results
    $("#results").removeClass("hidden");
-
+}
 
 function fetchAPI(url) {
   return fetch(url)
@@ -82,7 +82,7 @@ function getExchangeInfo(coinId) {
  // console.log(urlCoin)
   
   return fetchAPI(urlCoin);
-  return fetchAPI(urlCoinPrice);
+ 
 }
 
 
@@ -93,13 +93,13 @@ function watchForm() {
 
    // console.log(searchTerm);
 
-    $('#js-error-message').empty();
+    $('#js-exchange-error').empty();
 
     getNewsArticle(searchTerm)
     .then(displayNews)
     .catch(err => {
      // console.log(err);
-      $('#js-error-message').append(`<span>Couldn't fetch news about ${searchTerm}.</span>`);
+      $('#js-exchange-error').append(`<span>Couldn't fetch news about ${searchTerm}.</span>`);
     });
 
     getExchangeInfo(searchTerm)
@@ -107,9 +107,9 @@ function watchForm() {
       .catch(err => {
       //  console.log(err);
         if (err.message == '404') {
-          $('#js-error-message').append(`<span>There's no such coin: '${searchTerm}'.</span>`);
+          $('#js-exchange-error').append(`<span>There's no such coin: '${searchTerm}'.</span>`);
         } else {
-          $('#js-error-message').append(`<span>Couldn't fetch exchange info for '${searchTerm}'.</span>`);
+          $('#js-exchange-error').append(`<span>Couldn't fetch exchange info for '${searchTerm}'.</span>`);
         }
     });
 

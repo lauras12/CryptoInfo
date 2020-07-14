@@ -12,24 +12,27 @@
 <body>
     <div class="container">
         <h1>Crypto News Info</h1>
-        <p class="description">Type in the name of a cryptocurrency and submit to see a collection of recent news headlines and exchange infomation.</p>
+        <p class="description">Type in the name of a cryptocurrency and click submit to see a collection of recent news headlines and exchange infomation. Click <a href="https://www.coingecko.com/en/coins/all">here</a> is view a complete list of cryptocurrencies to enter.</p>
 
         <form id="js-form">
-            <label for="search-term"><strong>Search Term:</strong></label>
-            <input type="text" name="search-term" id="js-search-term" required>
+            <label for="js-search-term" id="search-term"><strong>Search Term:</strong></label>
+            <input type="text" name="search-term" id="js-search-term" required placeholder="bitcoin">
             <input type="submit" value="GO!" class="button">
         </form>
 
-        <p id="js-error-message" class="error-message"></p>
+        
         <section id="results" class="hidden">
-          <h2 id="results" class="hidden">Exchange Info</h2>
+          <h2>Exchange Info</h2>
+          <p id="js-error-error" class="error-message"></p>
           <ul id="exchange-list"></ul>
 
-          <h2 id="results" class="hidden">News Results</h2>
+          <h2>News Results</h2>
+          <p id="news-error-error" class="error-message"></p>
           <ul id="results-list"></ul>
 
         </section>
     </div>
+    <footer>Data provided by CoinGecko and Gnews API</footer>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
