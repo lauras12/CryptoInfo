@@ -29,7 +29,7 @@ function displayNews(responseJson) {
     // for each news article object in the items 
     //array, add a list item to the results 
     $('#results-list').append(
-      `<li><a href="${articles[i].url}"><h3 class="title">${articles[i].title}</a></h3>
+      `<li><a href="${articles[i].url}" target="_blank"><h3 class="title">${articles[i].title}</a></h3>
       <p class="articleDes">${articles[i].description}</p>
       </li>`
     )};
@@ -107,7 +107,7 @@ function watchForm() {
       .catch(err => {
       //  console.log(err);
         if (err.message == '404') {
-          $('#js-exchange-error').append(`<span>There's no such coin: '${searchTerm}'.</span>`);
+          $('#js-exchange-error').append(`<span>There's no such coin: '${searchTerm}'. Please try again with a vaild cryptocurrency. A list can be found <a href="https://www.coingecko.com/en/coins/all" target="_blank">here</a>.</span>`);
         } else {
           $('#js-exchange-error').append(`<span>Couldn't fetch exchange info for '${searchTerm}'.</span>`);
         }

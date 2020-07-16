@@ -97,6 +97,14 @@ ul {
   padding-bottom: 30px;
 }
 
+#js-exchange-error {
+  text-align: center;
+  font-size: 15px;
+  padding: 15px;
+  width: 75%;
+  color: #27496d;
+}
+
 /* styling footer */
 footer {
   font-family: monospace;
