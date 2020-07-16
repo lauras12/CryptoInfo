@@ -88,6 +88,7 @@ function getExchangeInfo(coinId) {
 
 function watchForm() {
   $('form').submit(event => {
+    $('#exchange-list').empty();
     event.preventDefault();
     const searchTerm = $('#js-search-term').val().trim().toLowerCase();
 
